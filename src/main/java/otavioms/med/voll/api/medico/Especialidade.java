@@ -1,6 +1,6 @@
 package otavioms.med.voll.api.medico;
 
-public enum Epecialidade {
+public enum Especialidade {
 
     ORTOPEDIA,
     CARDIOLOGIA,
