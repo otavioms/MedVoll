@@ -1,5 +1,6 @@
 package otavioms.med.voll.api.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import otavioms.med.voll.api.medico.DadosCadastroMedico;
@@ -15,7 +16,7 @@ public class MedicoController {
 
     //Serve para informar que quando chegar uma requisão POST tem que chamar este método
     @PostMapping          //Serve para receber dados do corpo da requisição
-    public void cadastrar(@RequestBody DadosCadastroMedico dados) {
+    public void cadastrar(@RequestBody @Valid DadosCadastroMedico dados) {
         repository.save(new Medico(dados));
     }
 
