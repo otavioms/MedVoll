@@ -2,7 +2,6 @@ package otavioms.med.voll.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import otavioms.med.voll.api.endereco.Endereco;
 import otavioms.med.voll.api.medico.DadosCadastroMedico;
 import otavioms.med.voll.api.medico.Medico;
 import otavioms.med.voll.api.medico.MedicoRepository;
