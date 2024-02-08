@@ -6,10 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
-import otavioms.med.voll.api.paciente.DadosCadastroPaciente;
-import otavioms.med.voll.api.paciente.DadosListagemPaciente;
-import otavioms.med.voll.api.paciente.Paciente;
-import otavioms.med.voll.api.paciente.PacienteRepository;
+import otavioms.med.voll.api.paciente.*;
 
 @RestController
 @RequestMapping("/pacientes")
@@ -27,5 +24,11 @@ public class PacienteController {
     @GetMapping
     public Page<DadosListagemPaciente> listar(@PageableDefault(size = 10, sort = {"nome"})Pageable paginacao) {
         return repository.findAll(paginacao).map(DadosListagemPaciente::new);
+    }
+
+    @PutMapping
+    public void atualizacao(@RequestBody DadosAtualizacaoPaciente dados) {
+        var paciente = repository.getReferenceById(dados.id());
+        paciente.atualizarInformacoes(dados);
     }
 }
