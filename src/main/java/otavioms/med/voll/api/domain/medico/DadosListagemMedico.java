@@ -1,4 +1,4 @@
-package otavioms.med.voll.api.medico;
+package otavioms.med.voll.api.domain.medico;
 
 public record DadosListagemMedico(
         Long id,

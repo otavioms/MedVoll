@@ -1,6 +1,6 @@
-package otavioms.med.voll.api.paciente;
+package otavioms.med.voll.api.domain.paciente;
 
-import otavioms.med.voll.api.endereco.Endereco;
+import otavioms.med.voll.api.domain.endereco.Endereco;
 
 public record DadosDetalhamentoPaciente(Long id, String nome, String email, String telfone, String cpf, Endereco endereco) {
 

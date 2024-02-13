@@ -1,4 +1,4 @@
-package otavioms.med.voll.api.endereco;
+package otavioms.med.voll.api.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
