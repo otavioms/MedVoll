@@ -25,4 +25,3 @@ Este é um projeto desenvolvido como parte do curso de Spring Boot da Alura, vol
 - **Java**: Linguagem de programação utilizada.
 - **Spring Boot**: Framework para desenvolvimento de aplicações Java.
 - **Spring Data JPA**: Facilita o acesso a dados relacionais por meio de frameworks de persistência.
-- **Spring Web**: Módulo Spring para desenvolvimento de aplicações web.
