@@ -24,7 +24,7 @@ public class AgendaDeConsultas {
     private PacienteRepository pacienteRepository;
 
     @Autowired
-    private List<ValidadorAgendamentoDeConsulta> validaores;
+    private List<ValidadorAgendamentoDeConsulta> validadoresAgendamento;
 
     @Autowired
     private List<ValidadorCancelamentoDeConsulta> validadoresCancelamento;
@@ -38,7 +38,7 @@ public class AgendaDeConsultas {
             throw new ValidacaoException("Id do médico informando não existe.");
         }
 
-        validaores.forEach(v -> v.validar(dados));
+        validadoresAgendamento.forEach(v -> v.validar(dados));
 
         var paciente = pacienteRepository.getReferenceById(dados.idPaciente());
         var medico = escolherMedico(dados);
