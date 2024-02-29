@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import otavioms.med.voll.api.domain.consulta.AgendaDeConsultas;
 import otavioms.med.voll.api.domain.consulta.DadosAgendamentoConsulta;
 import otavioms.med.voll.api.domain.consulta.DadosCancelamentoConsulta;
-import otavioms.med.voll.api.domain.consulta.DadosDetalhamentoConsulta;
 
 @RestController
 @RequestMapping("/consultas")
@@ -21,8 +20,8 @@ public class ConsultaController {
     @PostMapping
     @Transactional
     public ResponseEntity agendar(@RequestBody @Valid DadosAgendamentoConsulta dados) {
-        agenda.agendar(dados);
-        return ResponseEntity.ok(new DadosDetalhamentoConsulta(null, dados.idMedico(), dados.idPaciente(), dados.data()));
+        var dto = agenda.agendar(dados);
+        return ResponseEntity.ok(dto);
     }
 
     @DeleteMapping
