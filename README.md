@@ -1,6 +1,6 @@
 # Vollmed - API Rest para Gestão de Clínica Médica
 
-Este é um projeto desenvolvido como parte do curso de Spring Boot da Alura, voltado para a criação de uma API Rest para gerenciamento de uma clínica médica. A API oferece operações CRUD (Criar, Ler, Atualizar, Deletar) para médicos e pacientes, facilitando a gestão dos recursos da clínica.
+Este é um projeto desenvolvido como parte do curso de Spring Boot da Alura, voltado para a criação de uma API Rest para gerenciamento de uma clínica médica. A API oferece operações CRUD (Criar, Ler, Atualizar, Deletar) para médicos e pacientes, e também inclui agendamento e cancelamentos de consultas, assim facilitando a gestão dos recursos da clínica.
 
 ## Recursos
 
@@ -19,6 +19,10 @@ Este é um projeto desenvolvido como parte do curso de Spring Boot da Alura, vol
 - **Adicionar Paciente**: Adiciona um novo paciente ao sistema.
 - **Atualizar Paciente**: Atualiza as informações de um paciente existente.
 - **Remover Paciente**: Remove um paciente do sistema.
+
+### Consultas
+- **Agendamento de consultas**: Criar consultas seguindo as regras de negócio.
+- **Cancelamento de consultas**: Cancelar consultas seguindo as regras de negócio.
 
 ## Tecnologias Utilizadas
 
